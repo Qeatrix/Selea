@@ -1,0 +1,47 @@
+@import url(./Main/Colors.css);
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(https://raw.githubusercontent.com/Qeatrix/StylishhPortfolioBeta/main/assets/fonts/SFProDisplay-Regular.ttf);
+  }
+  
+  .LeftBar {
+    height: 100vh;
+    width: 225px;
+    background-color: #DAD8DE;
+  
+    font-family: myFirstFont;
+    font-size: 1.2em;
+  }
+  
+  .Categories {
+    padding-top: 50px;
+  }
+  
+  .Category {
+    display: flex;
+    height: 45px;
+    width: 100%;
+    line-height: 30px;
+  }
+  
+  .CategoryContainer {
+    display: flex;
+    height: 40px;
+    width: 200px;
+    margin: auto auto;
+    background-color: transparent;
+    border-radius: 12px;
+    line-height: 40px;
+  }
+
+  .CategoryName {
+    margin: auto 0;
+    margin-left: 7px;
+  }
+
+
+  
+  .active-category {
+    background-color: var(--active-category-bg);
+  }

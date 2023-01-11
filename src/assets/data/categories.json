@@ -1,0 +1,14 @@
+[
+    {
+        "id": 0,
+        "name": "All Elements"
+    },
+    {
+        "id": 1,
+        "name": "Favourites"
+    },
+    {
+        "id": 2,
+        "name": "Trash"
+    }
+]

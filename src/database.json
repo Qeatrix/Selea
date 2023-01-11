@@ -1,0 +1,23 @@
+[
+    {
+        "id": 0,
+        "name": "Google",
+        "login": "123",
+        "password": "John",
+        "website": "google.com"
+    },
+    {
+        "id": 1,
+        "name": "VK",
+        "login": "456",
+        "password": "Buba",
+        "website": "vk.com"
+    },
+    {
+        "id": 2,
+        "name": "Twitter",
+        "login": "pisuion",
+        "password": "asddasdasads",
+        "website": "twitter.com"
+    }
+]
