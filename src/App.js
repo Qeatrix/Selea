@@ -1,8 +1,8 @@
 import './assets/css/App.css';
 import {useState} from 'react';
 
+import DataHandler from './components/ExampleHook';
 import LeftBar from './components/LeftBar';
-import LoginsList from './components/LoginsList';
 import {Encrypt, Decrypt} from './lib/EncryptionHandler'
 
 
@@ -18,10 +18,10 @@ function App() {
   return (
     <div className="App">
       <LeftBar/>
-      <input placeholder="Key" onChange={(event) => {setKey(event.target.value)}}></input>
+      <DataHandler/>
+      {/*<input placeholder="Key" onChange={(event) => {setKey(event.target.value)}}></input>
       <input placeholder="Password" onChange={(event) => {setPassword(event.target.value)}}></input>
-      <button onClick={ProcessPassword}>Add</button>
-      <LoginsList/>
+  <button onClick={ProcessPassword}>Add</button>*/}
     </div> 
   );
 }

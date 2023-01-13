@@ -4,7 +4,11 @@
         "name": "Google",
         "login": "123",
         "password": "John",
-        "website": "google.com"
+        "website": "google.com",
+        "extraFields": {
+            "name": "12 times",
+            "value": "biba"
+        }
     },
     {
         "id": 1,

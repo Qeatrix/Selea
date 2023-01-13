@@ -1,5 +1,6 @@
 :root {
     --logincard-selected-bg: #0173e6;
     --logincard-hover-bg: #ebf4ff;
-    --category-selected-bg: #C6CADA;
+    --category-selected-bg: #94c0f3;
+    --category-hovered-bg: #C6CADA;
 }

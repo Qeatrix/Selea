@@ -4,6 +4,10 @@
     font-family: myFirstFont;
     src: url(https://raw.githubusercontent.com/Qeatrix/StylishhPortfolioBeta/main/assets/fonts/SFProDisplay-Regular.ttf);
   }
+
+  .ContentWrapper {
+    display: flex;
+  }
   
   .LeftBar {
     height: 100vh;
@@ -12,6 +16,8 @@
   
     font-family: myFirstFont;
     font-size: 1.2em;
+
+    user-select: none;
   }
   
   .Categories {
@@ -23,6 +29,12 @@
     height: 45px;
     width: 100%;
     line-height: 30px;
+
+    transition: all 0.1s;
+  }
+
+  .Category:active {
+    scale: 0.95;
   }
   
   .CategoryContainer {
@@ -30,9 +42,17 @@
     height: 40px;
     width: 200px;
     margin: auto auto;
-    background-color: transparent;
     border-radius: 12px;
     line-height: 40px;
+  }
+
+  .CategoryIcon {
+    height: 35px;
+    width: 35px;
+    margin: auto 0;
+    margin-left: 3px;
+
+    pointer-events: none;
   }
 
   .CategoryName {
@@ -43,5 +63,9 @@
 
   
   .active-category {
-    background-color: var(--active-category-bg);
+    background-color: var(--category-selected-bg);
+  }
+
+  .hovered-category {
+    background-color: var(--category-hovered-bg);
   }
