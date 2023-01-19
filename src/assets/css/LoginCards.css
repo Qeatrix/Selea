@@ -1,3 +1,4 @@
+@import url(./Main/Fonts.css);
 @import url(./Main/Colors.css);
 
 ul {
@@ -45,25 +46,38 @@ ul {
 
 .TextZone > p {
     width: 100%;
-    font-size: 1.1rem;
     margin: 0;
+    font-size: 1.1rem;
+    font-family: SF-Medium;
 }
 
 .TextZone > div {
     width: 100%;
     margin: 0;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    font-family: SF-Regular;
 }
 
-.LoginDetails {
-    width: 100%;
+.SyncErrorMessageContainer {
+    height: 100%;
+    margin: auto;
 }
 
-.LoginDetailsIcon {
-    height: 100px;
-    width: 100px;
+.SyncErrorMessageContainer > p {
+    font-size: 1.3rem;
+    font-family: SF-Regular;
 }
 
+.SyncErrorMessageContainer > button {
+    height: 35px;
+    width: 75px;
+    margin: auto;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: SF-Medium;
+    background-color: var(--leftbar-bg);
+}
 
 
 .active-logincard {

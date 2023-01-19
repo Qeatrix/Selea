@@ -1,0 +1,9 @@
+@font-face {
+  font-family: SF-Regular;
+  src: url('../../fonts/SFProDisplay-Regular.otf');
+}
+
+@font-face {
+  font-family: SF-Medium;
+  src: url('../../fonts/SFProDisplay-Medium.otf');
+}

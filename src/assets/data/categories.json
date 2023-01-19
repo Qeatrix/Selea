@@ -1,14 +1,17 @@
 [
     {
         "id": 0,
-        "name": "All Elements"
+        "name": "All Elements",
+        "icon": "AllElements_Icon"
     },
     {
         "id": 1,
-        "name": "Favourites"
+        "name": "Favourites",
+        "icon": "Fav_Icon"
     },
     {
         "id": 2,
-        "name": "Trash"
+        "name": "Trash",
+        "icon": "Trash_Icon"
     }
 ]

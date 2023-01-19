@@ -1,0 +1,84 @@
+@import url('./Main/Fonts.css');
+@import url('./Main/Colors.css');
+
+input {
+    height: 40px;
+    padding: 0 10px; 
+    font-size: 1rem;
+    border-radius: 12px;
+    border: var(--logindetails-input-border);
+}
+
+input:focus {
+    border: var(--logindetails-input-active-border);
+    outline: var(--logindetails-input-active-outline);
+}
+
+.LoginDetails {
+    width: 350px;
+    margin: 0 auto;
+    font-family: SF-Regular;
+}
+
+.LoginDetailsName {
+    display: flex;
+}
+
+.LoginDetailsName > img {
+    height: 100px;
+    width: 100px;
+    margin: 0 10px;
+}
+
+.LoginDetailsName > input {
+    width: 100%;
+    margin: auto 0; 
+    font-family: SF-Medium;
+}
+
+.LoginDetailsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.LoginDetailsContainer > div {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.LoginDetailsContainer > div > label {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.LoginDetailsInputContainer {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: flex-end;
+}
+
+.LoginDetailsInputContainer > input {
+flex: 1;
+}
+
+.LoginDetailsInputMenuButton {
+    position: absolute;
+    order: 1;
+}
+
+.LoginDetailsInputCopyButton {
+    position: absolute;
+    right: 30px;
+    order: 2;
+}
+
+.LoginDetailsInputContainer:hover .LoginDetailsInputCopyButton {
+    display: block !important;
+}
+
+.LoginDetailsInputContainer:hover .LoginDetailsInputCopyButton::before {
+    position: absolute;
+    right: 0;
+}

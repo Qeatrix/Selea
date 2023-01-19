@@ -1,71 +1,67 @@
-@import url(./Main/Colors.css);
+@import url('./Main/Fonts.css');
+@import url('./Main/Colors.css');
 
-@font-face {
-    font-family: myFirstFont;
-    src: url(https://raw.githubusercontent.com/Qeatrix/StylishhPortfolioBeta/main/assets/fonts/SFProDisplay-Regular.ttf);
-  }
+.ContentWrapper {
+  display: flex;
+}
 
-  .ContentWrapper {
-    display: flex;
-  }
-  
-  .LeftBar {
-    height: 100vh;
-    width: 225px;
-    background-color: #DAD8DE;
-  
-    font-family: myFirstFont;
-    font-size: 1.2em;
+.LeftBar {
+  height: 100vh;
+  width: 225px;
+  background-color: var(--leftbar-bg);
 
-    user-select: none;
-  }
-  
-  .Categories {
-    padding-top: 50px;
-  }
-  
-  .Category {
-    display: flex;
-    height: 45px;
-    width: 100%;
-    line-height: 30px;
+  font-family: SF-Regular;
+  font-size: 1.2em;
 
-    transition: all 0.1s;
-  }
+  user-select: none;
+}
 
-  .Category:active {
-    scale: 0.95;
-  }
-  
-  .CategoryContainer {
-    display: flex;
-    height: 40px;
-    width: 200px;
-    margin: auto auto;
-    border-radius: 12px;
-    line-height: 40px;
-  }
+/*.Categories {
+  padding-top: 50px;
+}*/
 
-  .CategoryIcon {
-    height: 35px;
-    width: 35px;
-    margin: auto 0;
-    margin-left: 3px;
+.Category {
+  display: flex;
+  height: 45px;
+  width: 100%;
+  line-height: 30px;
 
-    pointer-events: none;
-  }
+  transition: all 0.1s;
+}
 
-  .CategoryName {
-    margin: auto 0;
-    margin-left: 7px;
-  }
+.Category:active {
+  scale: 0.95;
+}
+
+.CategoryContainer {
+  display: flex;
+  height: 40px;
+  width: 200px;
+  margin: auto auto;
+  border-radius: 12px;
+  line-height: 40px;
+}
+
+.CategoryIcon {
+  height: 35px;
+  width: 35px;
+  margin: auto 0;
+  margin-left: 3px;
+
+  pointer-events: none;
+}
+
+.CategoryName {
+  margin: auto 0;
+  margin-left: 7px;
+}
 
 
-  
-  .active-category {
-    background-color: var(--category-selected-bg);
-  }
 
-  .hovered-category {
-    background-color: var(--category-hovered-bg);
-  }
+.active-category {
+  background-color: var(--category-selected-bg);
+}
+
+.hovered-category {
+  background-color: var(--category-hovered-bg);
+}

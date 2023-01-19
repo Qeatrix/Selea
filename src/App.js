@@ -1,10 +1,9 @@
 import './assets/css/App.css';
-import {useState} from 'react';
+import { useState } from 'react';
 
 import DataHandler from './components/ExampleHook';
 import LeftBar from './components/LeftBar';
-import {Encrypt, Decrypt} from './lib/EncryptionHandler'
-
+import { Encrypt, Decrypt } from './lib/EncryptionHandler'
 
 function App() {
   const [password, setPassword] = useState('');

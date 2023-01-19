@@ -3,10 +3,14 @@ import React, { useState } from "react";
 
 import '../assets/css/LeftBar.css';
 import Categories from '../assets/data/categories.json'
+import store from '../store/data'
 
 import LoginList from './LoginsList';
+import AppStatus from './AppState';
 
-import AllElements_Icon from '../assets/icons/Login.svg';
+import AllElements_Icon from '../assets/icons/Drawer.svg';
+import Fav_Icon from '../assets/icons/Star.svg';
+import Trash_Icon from '../assets/icons/Trash.svg';
 
 function LeftBar() {
     const [activeCategory, setActiveCategory] = useState(0);
@@ -23,9 +27,20 @@ function LeftBar() {
         }
     }
 
+    const categoryIcon = (data) => {
+        if (data.icon == 'AllElements_Icon') {
+            return AllElements_Icon;
+        } else if (data.icon == 'Fav_Icon') {
+            return Fav_Icon;
+        } else if (data.icon == 'Trash_Icon') {
+            return Trash_Icon;
+        }
+    }
+
     return (
         <div className="ContentWrapper">
             <div className="LeftBar">
+                <AppStatus/>
                 <div className="Categories">
                     {Categories.map((category, index) => 
                         <div
@@ -39,14 +54,14 @@ function LeftBar() {
                                 { 'active-category': index === activeCategory },
                                 { 'hovered-category': index === hoveredCategory })}
                             >
-                                <img className="CategoryIcon" src={AllElements_Icon} alt="Login Icon"></img>
+                                <img className="CategoryIcon" src={categoryIcon(category)} alt="Login Icon"></img>
                                 <p className="CategoryName">{category.name}</p>    
                             </div>    
                         </div>
                     )}
                 </div>
             </div>
-            {activeCategory === 0 && <LoginList/>}
+            {activeCategory === 0 && <LoginList store={store}/>}
         </div>
     )
 }

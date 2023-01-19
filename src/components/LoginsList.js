@@ -1,28 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
+import { observer } from 'mobx-react-lite';
+import UserData from '../store/data';
 
 import LoginDetails from './LoginDetails';
-
 import Login_Icon from '../assets/icons/Login.svg'
 import '../assets/css/LoginCards.css'
-import axios from 'axios';
 
-const LoginsList = () => {
+const LoginsList = observer(() => {
   const [activeTab, setActiveTab] = useState(0);
   const [hoveredTab, setHoveredTab] = useState(null);
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    fetchData();
-    const intervalId = setInterval(fetchData, 30000);
-    return () => clearInterval(intervalId);
-  }, []);
-
-  const fetchData = () => {
-    axios.get('http://localhost:3001/data')
-      .then(res => setData(res.data))
-      .catch(err => console.error(err))
-  }
 
   const handleMouseEnter = (index) => {
     if (index !== activeTab) {
@@ -35,14 +22,32 @@ const LoginsList = () => {
     setActiveTab(index);
   }
 
-  if (!data || !data[activeTab]) {
-    return <p>Loading data...</p>;
+  useEffect(() => {
+    UserData.getDataFromStore();
+    const interfavId = setInterval(() => {
+      UserData.getDataFromStore();
+    }, 3000);
+
+    return () => { clearInterval(interfavId) }
+  }, []);
+
+//  if (UserData.isFetching) {
+    //return <div>Data is fetching...</div>
+  //}
+
+  if (UserData.error) {
+    return (
+      <div className='SyncErrorMessageContainer'>
+        <p>Error: {UserData.error.message}</p>
+        <button onClick={() => UserData.fetchData()}>Retry</button>
+      </div>
+    )
   }
 
   return (
     <>
       <ul>
-        {data.map((card, index) => (
+        {UserData.data.map((card, index) => (
           <li
             key={card.id} 
             onClick={() => handleClick(index)}
@@ -62,15 +67,11 @@ const LoginsList = () => {
           </li>
         ))}
       </ul>
-      <div>
-        <div className="LoginDetails">
-          <img className="LoginDetailsIcon" src={Login_Icon}></img>
-        </div>
-          <LoginDetails key={activeTab} name={data[activeTab].name} username={data[activeTab].username} password={data[activeTab].password}/>
-          {data[activeTab].password} 
-      </div>
+      {UserData.data && UserData.data[activeTab] && 
+        <LoginDetails key={activeTab} name={UserData.data[activeTab].name} username={UserData.data[activeTab].username} password={UserData.data[activeTab].password}/>
+      }
     </>
   );
-}
+})
 
 export default LoginsList;
