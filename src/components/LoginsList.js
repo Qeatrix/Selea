@@ -8,7 +8,7 @@ import Login_Icon from '../assets/icons/Login.svg'
 import '../assets/css/LoginCards.css'
 
 const LoginsList = observer(() => {
-  const [activeTab, setActiveTab] = useState(0);
+  const [activeTab, setActiveTab] = useState(1);
   const [hoveredTab, setHoveredTab] = useState(null);
 
   const handleMouseEnter = (index) => {
@@ -17,9 +17,10 @@ const LoginsList = observer(() => {
     }
   }
 
-  const handleClick = (index) => {
+  const handleClick = (id) => {
     setHoveredTab(null);
-    setActiveTab(index);
+    setActiveTab(id);
+    console.log(activeTab);
   }
 
   useEffect(() => {
@@ -47,16 +48,16 @@ const LoginsList = observer(() => {
   return (
     <>
       <ul>
-        {UserData.data.map((card, index) => (
+        {UserData.data.slice().sort((a, b) => a.id - b.id).map((card, index) => (
           <li
             key={card.id} 
-            onClick={() => handleClick(index)}
-            onMouseEnter={() => handleMouseEnter(index)}
+            onClick={() => handleClick(card.id)}
+            onMouseEnter={() => handleMouseEnter(card.id)}
             onMouseLeave={() => setHoveredTab(null)}
             className="LoginCard"
           >
             <div
-              className={classNames('LoginCardContainer', { 'active-logincard': index === activeTab }, { 'hovered-logincard': index === hoveredTab })}
+              className={classNames('LoginCardContainer', { 'active-logincard': card.id === activeTab }, { 'hovered-logincard': card.id === hoveredTab })}
             >
                 <img src={Login_Icon} alt="Login Icon"></img>
                 <div className="TextZone">
@@ -67,8 +68,8 @@ const LoginsList = observer(() => {
           </li>
         ))}
       </ul>
-      {UserData.data && UserData.data[activeTab] && 
-        <LoginDetails key={activeTab} name={UserData.data[activeTab].name} username={UserData.data[activeTab].username} password={UserData.data[activeTab].password}/>
+      {UserData.data && UserData.data.find(d => d.id === activeTab) && 
+        <LoginDetails key={activeTab} {...UserData.data.find(d => d.id === activeTab)}/>
       }
     </>
   );

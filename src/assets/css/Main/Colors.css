@@ -2,9 +2,9 @@
     --leftbar-bg: #DAD8DE;
     --logincard-selected-bg: #0173e6;
     --logincard-hover-bg: #ebf4ff;
-    --logindetails-input-active-border: 1px solid #a5ccf6;
-    --logindetails-input-active-outline: 3px solid #acd0f9;
-    --logindetails-input-border: 1px solid #e4e4e4;
+    --logindetails-input-active-border: 2px solid #a5ccf6;
+    --logindetails-input-active-outline: 2px solid #acd0f9;
+    --logindetails-input-border: 2px solid #e4e4e4;
     --category-selected-bg: #c6cada;
     --category-hovered-bg: #C6CADA;
     --appstatus-synced-color: #848484;
