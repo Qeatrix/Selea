@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import classNames from "classnames";
 
-import UserData from '../store/data';
+import UserData from '../../../../store/data';
 
-import '../assets/css/LoginDetails.css';
+import '../../../../assets/css/LoginDetails.css';
 
-import ArrowDown_Icon from "../assets/icons/ArrowDown.svg";
-import Copy_Icon from "../assets/icons/Copy.svg";
-import Login_Icon from "../assets/icons/Login.svg";
+import ArrowDown_Icon from "../../../../assets/icons/ArrowDown.svg";
+import Copy_Icon from "../../../../assets/icons/Copy.svg";
+import Login_Icon from "../../../../assets/icons/Login.svg";
 import { observer } from "mobx-react-lite";
 
 const LoginDetails = observer((props) => {

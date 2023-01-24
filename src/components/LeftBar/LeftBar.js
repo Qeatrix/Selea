@@ -5,7 +5,7 @@ import '../../assets/css/LeftBar.css';
 import Categories from '../../assets/data/categories.json'
 import store from '../../store/data'
 
-import LoginList from '../LoginsList';
+import LoginList from './Categories/AllElements/LoginsList';
 import AppStatus from '../AppState';
 
 import IconProvider from "./IconProvider";
@@ -49,7 +49,7 @@ function LeftBar() {
                     )}
                 </div>
             </div>
-            {activeCategory === 0 && <LoginList store={store}/>}
+            {activeCategory === 1 && <LoginList store={store}/>}
 
         </div>
     )

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import { observer } from 'mobx-react-lite';
-import UserData from '../store/data';
+import UserData from '../../../../store/data';
 
 import LoginDetails from './LoginDetails';
-import Login_Icon from '../assets/icons/Login.svg'
-import '../assets/css/LoginCards.css'
+import Login_Icon from '../../../../assets/icons/Login.svg'
+import '../../../../assets/css/LoginCards.css'
 
 const LoginsList = observer(() => {
   const [activeTab, setActiveTab] = useState(1);
