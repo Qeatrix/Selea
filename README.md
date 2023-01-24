@@ -1,5 +1,5 @@
 # Selea
-A password manager client built with Node, React and Electron. The server will be available later.
+A password manager client built with Node, React and Electron. The server available [here.](https://github.com/Qeatrix/Selea-Server)
 
 ## Development
 
