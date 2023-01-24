@@ -1,4 +1,4 @@
-# Password Manager
+# Selea
 A password manager client built with Node, React and Electron. The server will be available later.
 
 ## Development
