@@ -1,11 +1,28 @@
-# PasswordManager
-Password manager built on ReactJS and ElectronJS
+# Password Manager
+A password manager client built with Node, React and Electron. The server will be available later.
 
-## Wallaby.js
+## Development
 
-[![Wallaby.js](https://img.shields.io/badge/wallaby.js-powered-blue.svg?style=for-the-badge&logo=github)](https://wallabyjs.com/oss/)
+1. Installation
+```
+git clone https://github.com/Qeatrix/PasswordManager.git
+```
 
-This repository contributors are welcome to use
-[Wallaby.js OSS License](https://wallabyjs.com/oss/) to get
-test results immediately as you type, and see the results in
-your editor right next to your code.
+2. Startup
+```
+cd PasswordManager && rm package-lock.json && npm install && npm start
+```
+
+## Technologies
+
+ - Javascript
+ - Node
+ - React
+ - Webpack
+ - Babel
+ - Electron
+ - MobX
+
+## Contributing
+
+A list of incomplete tasks will appear later.
