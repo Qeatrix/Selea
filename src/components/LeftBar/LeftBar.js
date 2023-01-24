@@ -1,16 +1,14 @@
 import classNames from "classnames";
 import React, { useState } from "react";
 
-import '../assets/css/LeftBar.css';
-import Categories from '../assets/data/categories.json'
-import store from '../store/data'
+import '../../assets/css/LeftBar.css';
+import Categories from '../../assets/data/categories.json'
+import store from '../../store/data'
 
-import LoginList from './LoginsList';
-import AppStatus from './AppState';
+import LoginList from '../LoginsList';
+import AppStatus from '../AppState';
 
-import AllElements_Icon from '../assets/icons/Drawer.svg';
-import Fav_Icon from '../assets/icons/Star.svg';
-import Trash_Icon from '../assets/icons/Trash.svg';
+import IconProvider from "./IconProvider";
 
 function LeftBar() {
     const [activeCategory, setActiveCategory] = useState(0);
@@ -24,16 +22,6 @@ function LeftBar() {
     const handleMouseEnter = (index) => {
         if (index !== activeCategory) {
             setHoveredCategory(index);
-        }
-    }
-
-    const categoryIcon = (data) => {
-        if (data.icon == 'AllElements_Icon') {
-            return AllElements_Icon;
-        } else if (data.icon == 'Fav_Icon') {
-            return Fav_Icon;
-        } else if (data.icon == 'Trash_Icon') {
-            return Trash_Icon;
         }
     }
 
@@ -54,14 +42,15 @@ function LeftBar() {
                                 { 'active-category': index === activeCategory },
                                 { 'hovered-category': index === hoveredCategory })}
                             >
-                                <img className="CategoryIcon" src={categoryIcon(category)} alt="Login Icon"></img>
-                                <p className="CategoryName">{category.name}</p>    
+                                <IconProvider name={category.icon} option={index === activeCategory ? 'solid' : 'normal'} fillColor={index === activeCategory ? 'white' : 'black'} />
+                                <p className={classNames('CategoryName', { 'active-category-name': index === activeCategory })}>{category.name}</p>    
                             </div>    
                         </div>
                     )}
                 </div>
             </div>
             {activeCategory === 0 && <LoginList store={store}/>}
+
         </div>
     )
 }

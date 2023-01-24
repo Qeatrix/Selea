@@ -1,16 +1,21 @@
 [
     {
-        "id": 0,
+        "id": 1,
+        "name": "Dashboard",
+        "icon": "Dashboard_Icon"
+    },
+    {
+        "id": 2,
         "name": "All Elements",
         "icon": "AllElements_Icon"
     },
     {
-        "id": 1,
+        "id": 3,
         "name": "Favourites",
-        "icon": "Fav_Icon"
+        "icon": "Favourite_Icon"
     },
     {
-        "id": 2,
+        "id": 4,
         "name": "Trash",
         "icon": "Trash_Icon"
     }

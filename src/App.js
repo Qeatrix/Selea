@@ -2,7 +2,7 @@ import './assets/css/App.css';
 import { useState } from 'react';
 
 import DataHandler from './components/ExampleHook';
-import LeftBar from './components/LeftBar';
+import LeftBar from './components/LeftBar/LeftBar';
 import { Encrypt, Decrypt } from './lib/EncryptionHandler'
 
 function App() {

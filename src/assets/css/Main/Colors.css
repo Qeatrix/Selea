@@ -1,6 +1,7 @@
 :root {
     --leftbar-bg: #DAD8DE;
-    --logincard-selected-bg: #0173e6;
+    /*--logincard-selected-bg: #0173e6;*/
+    --logincard-selected-bg: #0062ff;
     --logincard-hover-bg: #ebf4ff;
     --logindetails-input-active-border: 2px solid #a5ccf6;
     --logindetails-input-active-outline: 2px solid #acd0f9;
